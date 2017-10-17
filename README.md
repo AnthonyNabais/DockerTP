@@ -9,8 +9,10 @@
 # Docker run -d --name myapp -p 8887:8080 shoes  // pour démarrer le container à partir de l'image en lui donnant un nom grâce à --name, en   mappant un port grâce à -p, -d sert à le lancer en tâche de fond, pour ne pas rentrer directement dans le container 
 # J'ai bien accès à l'application web à partir de cette adresse 192.168.99.100:8887 (étant donné que je suis sur Docker Toolbox, je ne peux   y accéder en localhost.
 # Créaton d'un dossier Postgres pour la mise en place du deuxième Dockerfile pour l'image de Postgres (Postgres:9.5)
-# Pour réutiliser la structure de la base de données donnée, j'utilise la ligne 
+# Pour réutiliser la structure de la base de données donnée, j'utilise la ligne COPY ./init-db.sql /docker-entrypoint-initdb.d/
+# Pour avoir accès à la base de données de façon permanente (qu'elle ne soit pas supprimée à chaque fois qu'on la relance), j'ai ajouté une ligne de commande dans le Dockerfile de Postgres : VOLUME ["/var/lib/postgresql/data"]
+
+
 
 #Lier ensuite ces deux containers à l'aide 
 
-#Pour avoir accès à la base de données de façon permanente (qu'elle ne soit pas supprimée à chaque fois qu'on la relance), j'ai ajouté une ligne de commande dans le Dockerfile de Postgres : VOLUME ["/var/lib/postgresql/data"]

@@ -13,7 +13,7 @@ Pour avoir accès à la base de données de façon permanente (qu'elle ne soit p
 Docker build -t dbimage .   // pour créer l'image à partir du Dockerfile, -t pour donner un nom à l'image
 Docker run -d --name db dbimage  // pour démarrer le container à partir de l'image en lui donnant un nom grâce a --name 
 Docker run -d --name myapp -p 8887:8080 --link db shoes   // -d pour le démarrer en arrière fond, --name pour le nom, -p pour le port et --link sert à lier deux containers (celui qu'on créé -> myapp avec celui de la base de données déjà créées -> db à partir de l'image shoes)
-L'application lancé, j'ai bien la base de données qui est liée à l'application web, et même en arrêtant puis relançant le container de la base de données, les données déjà enregistrés ne sont pas perdues et sont bien gardées.
+L'application lancé à partir de l'adresse donné par Docker Toolbox avec le port renseigné, j'ai bien la base de données qui est liée à l'application web, et même en arrêtant puis relançant le container de la base de données, les données déjà enregistrés ne sont pas perdues et sont bien gardées.
 
 
 

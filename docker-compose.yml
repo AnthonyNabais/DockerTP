@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+ appshoes2:
+   build: ./DockerTP/warrepo
+   ports: 
+   - "8889:8080"
+   depends_on:
+   - db
+ db:
+   build: ./DockerTP/postgressql
+   ports:
+   - "5432:5432"
+   volumes:
+   - db_data:/var/lib/postgresql/data
+   container_name: db
+volumes:
+   db_data:

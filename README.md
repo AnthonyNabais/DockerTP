@@ -16,4 +16,4 @@ Docker run -d --name myapp -p 8887:8080 --link db shoes   // -d pour le démarre
 L'application lancé à partir de l'adresse donné par Docker Toolbox avec le port renseigné, j'ai bien la base de données qui est liée à l'application web, et même en arrêtant puis relançant le container de la base de données, les données déjà enregistrés ne sont pas perdues et sont bien gardées.
 
 
-
+docker-compose.yml est le deuxième exercice, il contient donc les deux containers.

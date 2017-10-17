@@ -1,6 +1,6 @@
 # DockerTP
 
-# But de l'application : Créer un container à partir de Tomcat (tomcat:8-jre8) et un autre à partir de Postgres (postgres:9.5) à l'aide de deux Dockerfile (Tomcat étant le serveur et Postgres la base de données), pour ensuite les lier et avoir une base de données permanente sur l'application web donnée.
+# But de l'application : Créer deux containers puis les lier.
 
 Récupération du dossier de l'application web (warrepo) à partir de github (Lauryao).
 Création du premier Dockerfile pour l'image de Tomcat (tomcat:8-jre8). 
